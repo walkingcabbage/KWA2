@@ -2,11 +2,12 @@ var mysql = require('mysql');
 var moment = require('moment');
 
 var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '1234',
-  database: 'kwa',
+  host: 'us-cdbr-east-06.cleardb.net',
+  user: 'b0ed835b3cbfae',
+  password: '387f4e42',
+  database: 'heroku_f3e13da7bc1a55b',
   dateStrings: 'date',
+  multipleStatements:true,
 });
 
 connection.connect(function (err) {
