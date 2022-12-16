@@ -1,0 +1,45 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/intro">협회 소개</a>
+  <a href="#">주요 사업</a>
+  <a href="/kwauser">회원 정보</a>
+  <a href="#">자료실</a>
+  <a href="/notice">자원 순환 정보</a>
+  <a href="#">자원 순환 교육</a>
+  <hr>
+  <a class="log" href="/login">로그인</a>
+  <a class="log" href="/join">회원가입</a>
+</div>
+
+<header>
+  <nav class="navwrap">
+    <div class="nav">
+      <a onclick="openNav()" class="menuwrap">
+        <span class="ham"><img class="icon" src="./img/iconmonstr-menu-left-lined-64.png" alt=""></span>
+        <span class="menu">Menu</span>
+      </a>
+      <a class="searchwrap" href="#">
+        <img class="icon" src="./img/iconmonstr-magnifier-lined-64.png" alt="">
+      </a>
+    </div>
+  </nav>
+  <div class="logowrap" id="logo">
+    <div class="long-line"></div>
+    <div class="logo"><a href="/">
+        <h1><img class="logoimg" src="./img/logo_2.png" alt="로고이미지"></h1>
+      </a></div>
+    <div class="short-line"></div>
+  </div>
+</header>
+<% if(subH==true){ %>
+<script>
+  ChangeSub();
+  </script>
+  <% } else{%>
+  <script>
+    ChangeMain();
+  </script>
+  <% } %>
+  <script src="js/headerChanger.js"></script>
+  <script src="js/slideNav.js"></script>
+  <script src="js/dropHeader.js"></script>

@@ -1,0 +1,28 @@
+
+<div class="writeWrap">
+  <div class="dividerWrap">
+      <section class="divider">
+          <strong>공지사항 수정</strong>
+      </section>
+
+  </div>
+  <form class="writeInner" action="/updates" method="post">
+    <input type="hidden" value="<%= row.id %>" name="id" id="id">
+      <div class="box titleW">
+          <label for="">제목</label>
+          <input id="noticeTitle" class="inp" type="text" name="title" value="<%= row.title %>">
+      </div>
+      <div class="box categoryW">
+        <label for="">분야</label>
+        <input id="noticeTitle" class="inp" type="text" name="category" value="<%= row.category %>">
+    </div>
+      <div class="box conW">
+          <label for="">내용</label>
+          <textarea id="noticeContent" class="inp" name="content"><%= row.content %></textarea>
+      </div>
+      <div class="writeBtnW">
+          <input class="submitBtn wb" type="submit" value="완료">
+          <a href="/notice" class="submitBtn bb">돌아가기</a>
+      </div>
+  </form>
+</div>

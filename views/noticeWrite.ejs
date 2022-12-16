@@ -1,0 +1,25 @@
+<div class="writeWrap">
+    <div class="dividerWrap">
+        <section class="divider">
+            <strong>공지사항 작성</strong>
+        </section>
+    </div>
+    <form class="writeInner" action="/writeNotice" method="post">
+        <div class="box titleW">
+            <label for="">제목</label>
+            <input id="noticeTitle" class="inp" type="text" name="title">
+        </div>
+        <div class="box categoryW">
+            <label for="">분야</label>
+            <input id="noticeTitle" class="inp" type="text" name="category">
+        </div>
+        <div class="box conW">
+            <label for="">내용</label>
+            <textarea id="noticeContent" class="inp" name="content"></textarea>
+        </div>
+        <div class="writeBtnW">
+            <input class="submitBtn wb" type="submit" value="완료">
+            <a href="/noticeList" class="submitBtn bb">돌아가기</a>
+        </div>
+    </form>
+</div>

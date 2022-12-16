@@ -1,0 +1,59 @@
+<div class="noticewrap">
+  <div class="dividerWrap">
+    <section class="divider">
+      <strong>회원현황</strong>
+      <p>한국 폐기물 협회에 가입되어있는 회원 현황입니다.</p>
+    </section>
+  </div>
+  <section class="userCont">
+    <article class="tab">
+
+      <ul>
+        <li><a href="/kwauser?Scategory=A" class="tabs"><span>전체</span></a></li>
+        <li><a href="/kwauser?Scategory=B" class="tabs"><span>특·광역시도</span></a></li>
+        <li><a href="/kwauser?Scategory=C" class="tabs"><span>시·군·구</span></a></li>
+        <li><a href="/kwauser?Scategory=D" class="tabs"><span>기관회원</span></a></li>
+        <li><a href="/kwauser?Scategory=E" class="tabs"><span>단체회원</span></a></li>
+        <li><a href="/kwauser?Scategory=F" class="tabs"><span>기업회원</span></a></li>
+        <li><a href="/kwauser?Scategory=G" class="tabs"><span>특별회원</span></a></li>
+      </ul>
+    </article>
+    <article class="tabCont">
+      <ul>
+        <% rows.forEach((row,index) => { %>
+        <li>
+          <div class="imgWrap">
+            <img src="<%= row.img %> " alt="">
+          </div>
+          <div class="subWrap">
+            <strong><%= row.name %> </strong>
+            <p class="add"><%= row.address %> </p>
+            <p class="tel"><strong>전화</strong><%= row.tel %></p>
+            <p class="fax"><strong>팩스</strong><%= row.fax %></p>
+            <a class="link" href="<%= row.link %> ">바로가기</a>
+          </div>
+        </li>
+        <% }); %>
+      </ul>
+    </article>
+  </section>
+  <span class="writeN"><a href="/writeUserPage">글쓰기</a></span>
+</div>
+<script>
+        const tabs=document.querySelectorAll('.tabs');
+        if(`<%= subcategory %>`=='A'){
+          tabs[0].classList.add('active');
+        }else if(`<%= subcategory %>`=='B'){
+          tabs[1].classList.add('active');
+        }else if(`<%= subcategory %>`=='C'){
+          tabs[2].classList.add('active');
+        }else if(`<%= subcategory %>`=='D'){
+          tabs[3].classList.add('active');
+        }else if(`<%= subcategory %>`=='E'){
+          tabs[4].classList.add('active');
+        }else if(`<%= subcategory %>`=='F'){
+          tabs[5].classList.add('active');
+        }else if(`<%= subcategory %>`=='G'){
+          tabs[6].classList.add('active');
+        }
+</script>

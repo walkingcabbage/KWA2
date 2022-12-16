@@ -1,0 +1,77 @@
+<script>
+    let con=`<%= row.content %>`;
+    con=con.replace(/</gi,'&lt;').replace(/>/gi,'&gt;').replace(/\"/gi,'&quot;').replace(/'/gi,'&quot;').replace(/\n/gi,'<br/>'); 
+</script>
+
+<div class="readWrap">
+    <div class="dividerWrap">
+        <section class="divider">
+            <strong>공지사항</strong>
+            <p>한국 폐기물 협회의 소식을 전해드려요.</p>
+        </section>
+    </div>
+    <section class="contW">
+        <table class="bbs_view" summary="게시물 상세보기입니다">
+            <colgroup>
+                <col width="22%">
+                <col width="78%">
+            </colgroup>
+            <colgroup>
+            </colgroup>
+            <tbody>
+                <tr>
+                    
+                    <th class="subject" colspan="2">
+                            <span class="category  press"><%= row.category %> </span>
+                            <h3><%= row.title %></h3>
+                        <ul class="view_detail">
+                            <li id="dat"><%= row.create_time %> </li>
+                            <li class="view"><%= row.views %></li>
+                        </ul>
+                    </th>
+                </tr>
+                <tr>
+                    
+                    <td class="view_content" colspan="2">
+                            <h3>
+                                <script>
+                                document.querySelector('.view_content>h3').innerHTML=con
+                                </script>
+                                
+                            </h3>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th class="pn_txt"><span class="prev"></span>이전글</th>
+                    <td class="cont">이전글이 없습니다.</td>
+                </tr>
+                <tr>
+                    <th class="pn_txt"><span class="next"></span>다음글</th>
+                    <td class="cont">다음글이 없습니다.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="btns">
+        <a 
+        onclick="if(confirm('정말로 삭제하시겠습니다?')){
+            location.href='/deletenotice?id=<%= row.id %>'
+            } else{
+            
+            }" class="submitBtn bb">삭제</a>
+        <a href="/updatenotice?id=<%= row.id %>" class="submitBtn bb">수정</a>
+        <a href="/notice" class="submitBtn bb">돌아가기</a>
+    </section>
+</div>
+
+
+<script>
+    const date=new Date();
+    const year=date.getFullYear();
+    const month=date.getMonth()+1;
+    const day=date.getDate();
+    const fullDate=`${year}.${month}.${day}`;
+    const dateValue=document.querySelector('#date');
+    dateValue.innerHTML=fullDate;
+</script>

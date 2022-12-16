@@ -1,0 +1,50 @@
+<div class="writeWrap">
+    <div class="dividerWrap">
+        <section class="divider">
+            <strong>폐기물협회 회원 작성</strong>
+        </section>
+    </div>
+    <form class="writeInner" action="/writeUser" method="post" enctype="multipart/form-data">
+        <div class="box titleW">
+            <label for="">기관명</label>
+            <input id="userTitle" class="inp" type="text" name="name">
+        </div>
+        <div class="box categoryW categoryU">
+            <label for="">분류</label>
+            <select id="userCategory" name="category">
+                <option value="특·광역시도" selected>특·광역시도</option>
+                <option value="시·군·구">시·군·구</option>
+                <option value="기관회원">기관회원</option>
+                <option value="단체회원">단체회원</option>
+                <option value="기업회원">기업회원</option>
+                <option value="특별회원">특별회원</option>
+            </select>
+        </div>
+        <div class="box titleW">
+            <label for="">주소</label>
+            <input id="userTitle" class="inp" type="text" name="addr">
+        </div>
+        <div class="box titleW">
+            <label for="">전화</label>
+            <input id="userTitle" class="inp" type="text" name="tel">
+        </div>
+        <div class="box titleW">
+            <label for="">팩스</label>
+            <input id="userTitle" class="inp" type="text" name="fax">
+        </div>
+        <div class="box titleW">
+            <label for="">링크</label>
+            <input id="userTitle" class="inp" type="text" name="link">
+        </div>
+        <div class="box titleW">
+            <label for="">로고이미지</label>
+            <input class="inp" type="file" name="img">
+        </div>
+
+        
+        <div class="writeBtnW">
+            <input class="submitBtn wb" type="submit" value="완료">
+            <a href="/kwauser" class="submitBtn bb">돌아가기</a>
+        </div>
+    </form>
+</div>

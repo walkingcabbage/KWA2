@@ -1,0 +1,40 @@
+  <h1 class="joinLogo"><a href="/"><img src="./img/KWA CI.png" alt="로고이미지"></a></h1>
+
+  <form id="form" method="post" onsubmit="return Validation();" action="/joinProcess">
+    <div class="box">
+      <h2>회원가입</h2>
+      <hr>
+      <h2 class="inpInfo">회원 정보 입력</h2>
+    </div>
+
+    <div class="box id">
+      <label for="">아이디</label>
+      <input id="id" class="inp" type="text" name="userId">
+    </div>
+    <div class="box pw">
+      <label for="">비밀번호</label>
+      <input id="pwd" class="inp" type="password" name="userPw">
+    </div>
+    <div class="box pwc">
+      <label for="">비밀번호 확인</label>
+      <input id="pwd2" class="inp" type="password" name="userPw2">
+    </div>
+    <div class="box addr">
+      <label for="">이메일</label>
+      <input id="mail" class="inp" type="text" name="userEmail">
+    </div>
+    <div class="box name">
+      <label for="">이름</label>
+      <input id="name" class="inp" type="text" name="userName">
+    </div>
+    <div class="box bd">
+      <label for="">생년월일 (예 : 19770101)</label>
+      <input id="num" class="inp" type="text" name="userNum">
+    </div>
+    <div class="box">
+    <input id="submit" class="submitBtn" type="submit" onclick="" value="회원가입">
+ </div>
+  </form>
+<script src="js/validation.js"></script>
+
+

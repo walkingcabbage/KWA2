@@ -1,0 +1,65 @@
+<div class="noticewrap">
+    <div class="dividerWrap">
+        <section class="divider">
+            <strong>공지사항</strong>
+            <p>한국 폐기물 협회의 소식을 전해드려요.</p>
+        </section>
+    </div>
+    <section class="cont">
+        <table class="bbs-con">
+            <thead>
+                <tr>
+                    <th width="8%" scope="col">번호</th>
+                    <th width="15%">구분</th>
+                    <th>제목</th>
+                    <th width="15%" scope="col">작성일</th>
+                </tr>
+            </thead>
+
+            
+            <% rows.forEach((row,index) => { %>
+
+            <tbody id="BrdList">
+                <tr>
+                    <td class="pc_line"><%= row.id %> </td>
+                    <td class="pc_line">
+                        <span class="category press"><%= row.category %> </span>
+                    </td>
+                    <td class="leftT">
+                        <div class="pc_line">
+                            <a href="/readNotice?id=<%= row.id %>"><%= row.title %></a>
+                        </div>
+                        <div class="mo_line">
+                            <span class="category press"><%= row.category %></span>
+                            <p class="subject"><a href=""><%= row.title %></a></p>
+                            <ul class="writer">
+                                <li><%= row.create_time %></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="pc_line"><%= row.create_time %></td>
+                </tr>
+            </tbody>
+            <% }); %>
+        </table>
+    </section>
+    <section class="listPage">
+        <span class="arrow left"></span>
+        <span class="listNum">1</span>
+        <span class="arrow right"></span>
+        <span class="writeN"><a href="/writeNoticePage">글쓰기</a></span>
+    </section>
+    <dl class="bbs_search">
+        <dt>
+            <select name="searchopt" class="select" title="검색조건을 선택하세요">
+                <option value="subject">제목</option>
+            </select>
+        </dt>
+        <dd class="sinput">
+            <input type="text" name="searchtxt" id="searchtxt" class="search_input" value title="검색어 입력" size="35">
+        </dd>
+        <dd class="sbtn">
+            <input type="button" value="검색" align="absmiddle" title="검색" class="btn_b_s">
+        </dd>
+    </dl>
+</div>

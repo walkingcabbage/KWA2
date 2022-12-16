@@ -1,0 +1,119 @@
+.contW{
+    width: 100%;
+    padding: 0 8.3333%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+.bbs_view {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    table-layout: fixed;
+    background: #fff;
+}
+.bbs_view th {
+    color: #222;
+    text-align: left;
+    padding: 17px 25px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.bbs_view th.subject {
+    font-size: 1rem;
+    padding: 35px 0;
+    border-top: 2px solid #333333;
+    border-right: none;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+.bbs_view .category {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.25pt;
+    line-height: 37px;
+    border-radius: 37px;
+    width: 106px;
+    text-align: center;
+    margin: 0 0 12px;
+}
+.bbs_view .category.press {
+    background: #5ac4be;
+    color: #fff;
+}
+
+.bbs_view th.subject h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #333333;
+    letter-spacing: -1pt;
+    line-height: 130%;
+    padding: 0 0 12px;
+    word-break: keep-all;
+}
+.bbs_view th.subject .view_detail {
+    font-size: 0;
+    margin: 0 -15px;
+}
+.bbs_view th.subject .view_detail li {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 130%;
+    font-weight: 400;
+    color: rgba(119,119,119,.8);
+    padding: 0 15px;
+    position: relative;
+}
+.bbs_view th.subject .view_detail li:after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 10px;
+    background: #dddddd;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+}
+.bbs_view th.subject .view_detail li.view:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 9px;
+    background: url('../img/view.png') no-repeat center/100% auto;
+    margin: -2px 4px 0 0;
+    vertical-align: middle;
+}
+.bbs_view td.view_content {
+    padding: 35px 0;
+    word-break: break-all;
+    border-bottom: 1px solid #ddd;
+}
+.bbs_view td.cont {
+    border-bottom: 1px solid #ddd;
+    padding: 17px 25px;
+    text-align: left;
+    font-size: 1rem;
+}
+.bbs_view th .prev, .bbs_view th .next {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin: -2px 20px 0 0;
+}
+.bbs_view th .prev {
+    background: url('../img/prev.png') no-repeat center/100% auto;
+}
+.bbs_view th .next {
+    background: url('../img/next.png') no-repeat center/100% auto;
+}
+.btns{
+    width: 100%;
+    padding: 0 8.3333%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
