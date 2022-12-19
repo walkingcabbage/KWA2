@@ -2,12 +2,11 @@ var mysql = require('mysql');
 var moment = require('moment');
 
 var connection = mysql.createConnection({
-  host: 'us-cdbr-east-06.cleardb.net',
-  user: 'b0ed835b3cbfae',
-  password: '387f4e42',
-  database: 'heroku_f3e13da7bc1a55b',
+  host: '127.0.0.1',
+  user: 'root',
+  password: '1234',
+  database: 'kwa',
   dateStrings: 'date',
-  multipleStatements:true,
 });
 
 connection.connect(function (err) {
@@ -62,7 +61,14 @@ function getNoticeByid(id, callback) {
     }
   )
 }
-
+function getKWAUserByid(id, callback) {
+  connection.query(`select * from kwauser where id=${id}`,
+    (err, row) => {
+      if (err) throw err;
+      callback(row);
+    }
+  )
+}
 function insertNotice(title, content, category, callback) {
   connection.query(`INSERT INTO notice(title,category,views,create_time,content) VALUES ('${title}','${category}',0,NOW(),'${content}')`, (err) => {
     if (err) throw err;
@@ -77,9 +83,22 @@ function updateNotice(id, title, content, category, callback) {
     callback(row);
   })
 }
+function updateKWAuser(id, name, category, address,tel,fax,link,img, callback) {
+  connection.query(`UPDATE kwauser SET name='${name}', address='${address}',
+  category='${category}',tel='${tel}',fax='${fax}',link='${link}',img='${img}' WHERE id=${id}`, (err, row) => {
+    if (err) throw err;
+    callback(row);
+  })
+}
 
 function deleteNoticeByid(id, callback) {
   connection.query(`delete from notice where id=${id}`, (err => {
+    if (err) throw err;
+    callback();
+  }))
+}
+function deleteKWAUserByid(id, callback) {
+  connection.query(`delete from kwauser where id=${id}`, (err => {
     if (err) throw err;
     callback();
   }))
@@ -153,4 +172,7 @@ module.exports = {
   getKWAUserF,
   getKWAUserG,
   insertKWAUser,
+  getKWAUserByid,
+  updateKWAuser,
+  deleteKWAUserByid,
 };

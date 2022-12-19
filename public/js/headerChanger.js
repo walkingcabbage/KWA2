@@ -15,4 +15,3 @@ function ChangeMain() {
   header.classList.remove('subActive');
   logowrap.classList.remove('subActive2');
 }
-

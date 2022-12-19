@@ -306,8 +306,45 @@ router.post('/writeUser', upload.single('img'), (req, res) => {
 })
 // href="/deletenotice?id=<%= row.id %>"
 
+//회원현황 수정 페이지
+router.get('/updateKWAUser', (req, res) => {
+  const id = req.query.id;
+  db.getKWAUserByid(id, (rows) => {
+    console.log(rows[0]);
+    res.render('KWAUserUpdate', {
+      'headerSW': true,
+      'footerSW': true,
+      'subH': true,
+      'category': 'KWAUser',
+      'row': rows[0],
+    });
+  })
+})
+//회원현황 수정 프로세스
+router.post('/updatesU',upload.single('img'), (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  const id = param.id;
+  const name = param.name;
+  const category = param.category;
+  const address = param.addr;
+  const tel = param.tel;
+  const fax = param.fax;
+  const link = param.link;
+  let img = 'uploads/' + req.file.filename;
+  console.log(address);
+  db.updateKWAuser(id, name, category, address,tel,fax,link,img, () => {
+    res.redirect('/kwauser');
+  })
+})
 
-
+//회원현황 삭제 프로세스
+router.get('/deleteKWAUser', (req, res) => {
+  let id = req.query.id;
+  console.log(id);
+  db.deleteKWAUserByid(id, () => {
+    res.redirect('/kwauser');
+  })
+})
 
 //서브페이지
 // router.get('/sub1', (req, res) => {
