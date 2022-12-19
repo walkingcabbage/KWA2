@@ -14,6 +14,5 @@ function ChangeMain() {
   const logowrap = document.querySelector('.logowrap');
   header.classList.remove('subActive');
   logowrap.classList.remove('subActive2');
-  document.querySelector('.subActive').parentElement.style.height='0px'
 }
 
