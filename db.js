@@ -2,11 +2,12 @@ var mysql = require('mysql');
 var moment = require('moment');
 
 var connection = mysql.createConnection({
-  host: '127.0.0.1',
-  user: 'root',
-  password: '1234',
+  host: 'database-1.cbz6fbp9zvar.ap-northeast-2.rds.amazonaws.com',
+  user: 'admin',
+  password: 'fc357159!!',
   database: 'kwa',
   dateStrings: 'date',
+  multipleStatements:true,
 });
 
 connection.connect(function (err) {
