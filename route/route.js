@@ -48,7 +48,14 @@ router.get('/join', (req, res) => {
     'subH': false,
   });
 })
-
+//준비중인 페이지
+router.get('/preparing', (req, res) => {
+  res.render('preparing', {
+    'headerSW': true,
+    'footerSW': true,
+    'subH': true,
+  });
+})
 //로그인
 router.get('/login', (req, res) => {
   res.render('login', {

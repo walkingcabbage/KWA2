@@ -259,10 +259,11 @@ p{
 
 .sec5 {
   width: 100%;
-  height: 400px;
+  /* height: 500px; */
   background-color: #146356;
   padding-top: 20px;
   margin-top: 220px;
+  padding-bottom: 50px;
 }
 
 .sec5top {
@@ -297,13 +298,15 @@ p{
 
 .listInner>ul {
   display: flex;
-  gap: 2%;
+  /* gap: 2%; */
 }
-
+.sec5mid{
+  margin: 30px 0;
+}
 .listInner>ul>li>a {
   display: block;
-  width: 378px;
-  height: 249px;
+  /* width: 378px; */
+  height: 350px;
   background-color: #fff;
   padding: 40px;
   box-sizing: border-box;
@@ -316,6 +319,7 @@ p{
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
+  word-break: keep-all;
 }
 .nSubcon{
   font-size: 16px;
@@ -625,7 +629,7 @@ margin-bottom: 70px;
     font-size: 16px;
   }
   .sec5 {
-    height: 320px;
+    /* height: 400px; */
   }
   .noticeTitle {
 
@@ -642,7 +646,7 @@ margin-bottom: 70px;
   margin-top: 16px;
   }
   .listInner>ul>li>a {
-    height: 200px;
+    height: 350px;
     padding: 32px;
   }
   .sec6 .title {
@@ -710,10 +714,7 @@ justify-content: space-between;
     margin-top: 16px;
     font-size: 16px;
   }
-  .sW{
-    margin-left: 10% !important;
 
-  }
 }
 @media(max-width:1215px){
   .videowrap {
@@ -745,7 +746,7 @@ justify-content: space-between;
 }
 @media (max-width: 560px){
   .sW{
-    margin-left: 0px !important;
+    /* margin-left: 0px !important; */
   }
 .topContentBox {
     width: 100%;

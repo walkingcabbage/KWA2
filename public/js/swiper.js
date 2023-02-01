@@ -7,9 +7,9 @@ const noticeSwiper=new Swiper('.nSwiper',{
     delay: 3000 
   },
   loop: true,
-  slidesPerView: 4,
+  slidesPerView: 'auto',
   spaceBetween: 10,
-  centeredSlides: true,
+  // centeredSlides: false,
   // freeMode: true,
   navigation: {
     nextEl: ".next",

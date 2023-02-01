@@ -138,3 +138,13 @@ left:20%;
   padding: 5px 20px;
   border-radius: 5px;
 }
+@media (max-width:1600px) {
+  .tab ul{
+    font-size: 16px;
+  }
+}
+@media (max-width:768px) {
+  .tab ul{
+    font-size: 14px;
+  }
+}

@@ -16,9 +16,17 @@
   /* align-items: center; */
   /* font-size: 24px; */
   font-weight: bold;
-  width: 380px !important;
+  width: 350px;
 }
 .sW{
-  margin-left: 550px; 
-  width: 1200px;
+  /* margin-left: 550px;  */
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width:1600px) {
+  .sW{
+    /* margin-left: 10% !important; */
+    width: 90%;
+
+  }
 }
