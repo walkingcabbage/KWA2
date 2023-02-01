@@ -68,6 +68,7 @@ router.post('/login', (req, res) => {
     'userData': param
   });
 })
+
 //회원가입 프로세스
 router.post('/joinProcess', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
