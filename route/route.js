@@ -53,6 +53,7 @@ router.get('/preparing', (req, res) => {
   res.render('preparing', {
     'headerSW': true,
     'footerSW': true,
+    'category': 'intro',
     'subH': true,
   });
 })
