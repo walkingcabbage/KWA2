@@ -92,9 +92,10 @@ a {
 
 .wrap {
   width: 100%;
+  overflow-x: hidden;
 }
 #header{
-
+overflow-y: hidden;
 }
 /* #header:after {
   content: '';
