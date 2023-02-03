@@ -155,8 +155,8 @@ nav.navwrap {
   align-items: center;
   justify-content: space-between;
   z-index: 3;
-  position: absolute;
-   /* position: fixed; */
+  /* position: absolute; */
+   position: fixed;
    top: 32px;
    transition: top 0.5s;
    padding-bottom: 10px;
@@ -194,6 +194,7 @@ nav.navwrap {
 
 .subActive2 {
   /* filter: invert(100%); */
+  position: absolute;
   bottom: -40px !important;
   /* background-color: #146356; */
   padding-bottom: 15px;
